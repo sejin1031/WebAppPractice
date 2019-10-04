@@ -1,0 +1,58 @@
+.overall{
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: url('./blueTextureBG.jpg')
+}
+
+.body{
+    border :  10px solid white;
+    background-color: white;
+}
+.title{
+    text-align: right;
+    overflow: visible ;
+    background-color: #1D2475;
+    color : white;
+}
+.subtitle{
+    font-size: 14pt;
+    color: #CCCCCC;
+}
+
+.cont{
+    background-color: #A6CE39;
+    margin-left: 180px
+}
+
+.content{
+    border : 4px solid#1D2475;
+    border-radius: 15px;
+    background-color: #99CCFF;
+    padding : 5px;
+    margin-top : 10px;
+    overflow: hidden;
+}
+
+.cont :nth-child(2) :nth-child(1){
+    background-color: #A6CE39;
+}
+
+
+.contenthead{
+    border-bottom : 2px dashed blue;
+}
+
+.image{
+    float: right;
+    background-color: transparent !important;
+}
+
+.link{
+    margin-top : 10px;
+    margin-right: 10px;
+    border : 4px solid#1D2475;
+    border-radius: 15px;
+    float : left;
+    background-color: #99CCFF;
+}
+
