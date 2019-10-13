@@ -1,0 +1,112 @@
+body{
+    background-image: url("./background.png");
+    font-size:  8pt;
+    font-family: Verdana, Tahoma;
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    background-image: url("./bannerbg.png");
+    background-repeat: repeat-x;
+    height: 50px;
+    
+}
+#banner img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#heading{
+    text-align: center;
+    font-size: 24pt;
+    font-family: Tahoma;
+    text-shadow: 3px 3px #999999;
+}
+
+#overall{
+    overflow: hidden;
+    margin: auto;
+    align-self: center;
+    width: 800px;
+    border: 4px gray solid;
+    border-radius: 20px;
+}
+
+
+#rotten{
+    width: 550px;
+
+}
+#rotten > div:nth-child(1){
+    background-image: url("./rbg.png");
+    background-size: 83px;
+    background-repeat: repeat-x;
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+}
+#rotten > div:nth-child(1) > img{
+    vertical-align: bottom;
+    height: 83px;
+}
+.review{
+    margin-left: 2%;
+    float: left;
+    width: 47%;
+    overflow: hidden;
+}
+
+.review p:nth-child(2n-1){
+    overflow: hidden;
+    white-space: 2%;
+    padding: 8px;
+    background-color: #E8DC9B;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-size: 8pt bold;
+    margin-top: 20pt;
+}
+
+.review p:nth-child(2n-1) img{
+    float: left;
+    margin-right: 5px;
+}
+.review p:nth-child(2n) img{
+    float: left;
+    margin-right: 5px;
+}
+
+.review p:nth-child(2n) :nth-child(3n){
+    font-style: italic;
+}
+#overview{
+    overflow: visible;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #A2B964;
+    float: right;
+    font-size: 8pt;
+    font-family: Arial;
+}
+#overview dt{
+    margin-left: 10pt;
+    font-weight: bold;
+    margin-top: 10pt;
+}
+
+#validator{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.5;
+}
+#footer{
+    background-color: #A2B964;
+    text-align: center;
+    margin-top: 109%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
