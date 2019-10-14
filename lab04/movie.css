@@ -26,6 +26,7 @@ body{
 }
 
 #overall{
+    padding: 0;
     overflow: hidden;
     margin: auto;
     align-self: center;
@@ -105,8 +106,8 @@ body{
 }
 #footer{
     background-color: #A2B964;
+    clear: both;
     text-align: center;
-    margin-top: 109%;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 5px;
 }
