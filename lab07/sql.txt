@@ -1,0 +1,65 @@
+create database college;
+
+create table student(
+    student_id integer not null,
+    name varchar(20) not null,
+    year integer default 1,
+    dept_no integer not null,
+    major varchar(40),
+    primary key(student_id)
+);
+
+create table department(
+    dept_no integer not null auto increment,
+    dept_name varchar(40) not null unique,
+    office varchar(40) not null,
+    office_tel varchar(26),
+    primary key(dept_no)
+);
+
+alter table student add column gender varchar(10) not null;
+
+insert into student(student_id,name,year,dept_no,major)
+    values(20070002, 'Jane Smith', 3, 4, 'Business Administration') (20060001, 'Ashley Jackson', 4, 4, 'Business Administration')
+(20030001, 'Liam Johnson', 4, 2, 'Electrical Engineering') (20040003, 'Jacob Lee', 3, 2, 'Electrical Engineering')
+(20060002, 'Noah Kim', 3, 1, 'Computer Science') (20100002, 'Ava Lim', 3, 4, 'Business Administration')
+(20110001, 'Emma Watson', 2, 1, 'Computer Science') (20080003, 'Lisa Maria', 4, 3, 'Law')
+(20040002, 'Jacob William', 4, 5, 'Law') (20070001, 'Emily Rose', 4, 4, 'Business Administration')
+(20100001, 'Ethan Hunt', 3, 4, 'Business Administration');
+
+insert into department(dept_name,office,office_tel)
+    values ('Computer Science', 'Science Building 101', '02-3290-0123')
+('Electrical Engineering', 'Engineering Building 401', '02-3290-2345')
+('Law', 'Law Building 201', '02-3290-7896')
+( 'Business Administration', 'Business Building 104', '02-3290-1112')
+('English Language and Literature', 'Language Building 303', '02-3290-4412');
+
+update department set dept_name = 'Electrical and Electonics Engineering' where dept_name = 'Electrical Engineering'
+
+insert into department(dept_name,office,office_tel)
+    values ('Special Education', 'Education Building 403', '02-3290-2347');
+
+update student set dept_no = 6 where name = 'Emma Watson';
+
+delete from student where name = 'Jason Mraz';
+delete from student where name = 'John Smith';
+
+select name from student natural join department where dept_name = 'Computer Science';
+select id,year,major from student;
+select name from student where year=3;
+select name from student where year=1 or year=2;
+select * from student natural join department where dept_name = "Business Administration";
+
+
+select * from student where student_id like %'2007'%;
+select * from student order by student_id;
+select * from student group by department avg(year) > 3; 
+select * from student natural join department where dept_name = 'Business Administration'like %'2007'%
+limit 2;
+
+select role from roles natural join movies where name = 'Pi' limit 28;
+select a.first_name, a.last_name from actors as a join roles as r on a.id = r.actor_id limit 3;
+select distinct m.name from movies as m join movies_genres as mg on m.id = mg.movie_id group by mg.genre order by count(mg.genre) limit 3;
+
+select d.first_name, d.last_name from directors as d join directors_genres as dg on d.id = dg.director_id group by d.id order by count(dg.genre) desc limit 1;
+
